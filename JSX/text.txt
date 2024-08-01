@@ -1,0 +1,15 @@
+when we render jsx directly to react dom it will through an error 
+
+babel is js compiler , it convert new js to old js also it convert JSX to react.createElemwhen 
+type attribute in script tag 
+default value is text/javascript , when it is javascript only then it will run it as javascript,
+
+when we apply type = text/babel it does nothing, it just stops execution(run) of the javascript file and html will not send request to javascript
+
+apply babel into type attribute and including cdn link of babel it will then send the request to javascript file  and transform our code to react createElement 
+
+what does bavel does? bavel send request to our script file and then it will get text  / html text like code and then it will transform it to react element we can check this in devtool html file , here after script tag in which we have include our js file we have another script tag that contain all code that we have write in our js file (in JSX format) in the form of reactElement format
+
+how can we put a javascript value inside JSX ?
+we have to put a curly bracket to include javascript code, it will create reactElement with comma automatically we can check this in dev window index file {} inside this curly bracket we can write any javascript logic , 
+react does not show some value as undefined , null , true , false , they can be shown as string but not as javascript code

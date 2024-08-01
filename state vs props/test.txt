@@ -1,0 +1,47 @@
+state is local variable that is defined within th comppnent we can give initial value and set new value ot it each time when new value is set to the component then our component re-render.
+states are mutuable we can change them, as when we set them
+
+props, when parent decide which value is passed to the parent it basically the argument passed to the function , it is immutable but we can change this but acc to props concepet we should not modify them 
+
+props can be the state for its parent or a simple value
+
+in case of props paret decide whcih value is passed in the component and in case of state component itself decide the state of the component
+
+
+one similarity is that wether or state or props change or update our page re-render
+
+we can use both props and state together
+
+
+// REACT FRAGMENT
+JSX expression must have one parent expression, when we return something from a function component we can defined only one parent 
+we can wrap our return childs within a div but it will create a extra div in our html element, to avoid that we can use react FRAGMENT
+ we can use <></> this symbol to wrap our return value or import fragment 
+
+ fragment will not create any element like div in our html
+
+ fragment is datatype symbol, when we use fragment it create react.createElement behing the scenes
+
+
+ // CHILD PROPS IN REACT
+ till now we are using tag as self closing tag but we can use component as opening and closing tag also, then it will become like html tag, then all the props wil become it's atribute, and we can write anything in between these opening and closing tag we can add javascript also inside {} (curly braces) 
+
+ we can pass other component laso as the children in component, and when we do not pass anything to the html element then it will give undefine 
+
+ // conditional rendering in REACT
+
+ we can use conditional rendering in react to choose which component to show on the page based on a condition
+
+
+ // how to scope css to a component in react
+ when we apply css through import css then it will apply in all the element in which we have applied that class no matter weather its react element or not once css is load in the page it  will aapply
+
+ to over come this we use .modu;e.css file and when we use this extension for css file we can not directly import it we need to use import styles from "./counter.module.css" here styles can be given any name but for convention we give this name, and to use this style with class we do 
+ styles.className (this will create that is this styles will create a object of the class and id style object and give this aunque name so that it will apply only in the element in which this style is applied)
+
+ in short to clear conflich between the two element haf=cing same calss we use module.css this will add some modifier to the class
+
+ do not give name of calss with highfun as when we do this then at the time of applying styles we need to use object notation and use '' string symbol so for easyness we use camel case for className
+
+
+ to use two classes in same element we use array of the classes to be applied and join them using space

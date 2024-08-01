@@ -1,0 +1,12 @@
+we can import react or any node package directly
+our browser do not under stand node_modules, it is only for server
+
+and react do not run on server it is for browser it s client side 
+
+what is parcel and why we need to use parcel 
+parcel is a bundler it create a folder dist which have index.html file and this file include javascript file in script tag and these files are created by parcel it is not our files and in the js file we have our whole react code when we import react and reactdom file in our js file then parcel automatically include di folder when we run npx parcel index.html 
+
+
+in disc folder js file we have a lot code as parcel
+
+hot reloadimg means new code will be updated automatically withour relaod of the browser

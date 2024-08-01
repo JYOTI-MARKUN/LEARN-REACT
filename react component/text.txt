@@ -1,0 +1,18 @@
+order issue using pure javaScript
+
+when we render multiple element in react and pass some argument then if we do not pass element in order then it will create a mess,
+to overcome this problem we can pass object of key value pair and pass this object and use destrucring to get elements from array or object
+we can give any name to the object that we pass in the function, but for convention we give name as props
+
+render method takes react element,react element is javaScript object tat can not be null, it should contain some property
+
+when we define a render method then here type can any tag, string or function
+when we set type as function then we just define the name of the function and we do not call it as it will be called by render function automatically, when we try to call it in type card2() the it will consider as an object
+
+when
+
+
+react element whose type is function is and that function itself return a  react element is called react component
+or react element whose type is function and this function return a JSX
+or a function that return a JSX
+or  

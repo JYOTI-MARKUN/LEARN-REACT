@@ -1,0 +1,11 @@
+
+
+.apple-basket-counter{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.Basket,p{
+    margin-inline: 150px;
+}

@@ -1,0 +1,22 @@
+.card-container{
+    max-width: 250px;
+    border: 2px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-container img{
+width: 100%;
+border: 2px solid black;
+}
+
+.card-content{
+    padding-inline: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:15px;
+}

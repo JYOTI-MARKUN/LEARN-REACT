@@ -1,0 +1,2 @@
+render function takes only one argument
+we can pass a array if we want to rendor multiple items (array of react element)

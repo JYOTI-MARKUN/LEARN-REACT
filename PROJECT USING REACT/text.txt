@@ -1,0 +1,31 @@
+
+ array will convert into react object
+ when we get true for an array then the value is stored in the array
+ every string has empty string
+
+ lifting up the state
+ fetch data in react
+
+ in case of fetch api when we do not use statevaribales then whne function call the value in the ui will set to the initial value, not the value we git from fetch as when fetch call an api then it just send the request to api, and go out from callstack, after that return statement will execute and our page component will never the value of fetch api call as it takes some time to get data from an api,
+
+ statevaribales fetch api call :  using state variable you will get the updated value but there is one problem in this it will send o lot of request which is not good, as it will give load to the backend
+
+ when our component renders to the it run from top to bottom then when it find setstate, then it will rerender the page, then again run , then again set so it will render multiple type, so it will run infinitely, so to escape this situation we need to use if condition that if length of the component value we want to set is zero only then rerender it , this has also some limitation like this can be the case when we can to remove all data from the ui but when we remove it again component render again if condition wil check and again it will rerender the whole component again
+
+ if we want to rerender our component only once then we need to use useEffect (it is a hook in react) and we can pass a callbackfunction to it and when we give an empty array to it then the code inside it will run only once, it we do not pass any empty array then it will run as many times as our component rerender,
+
+ we use useEffect mostlly when we are fetching some data and wanna render only once
+
+ in useEffect hook we can pass two values one is an empty array, this empty array also called depency array, we can any value to this array and when this value changes our code will run and component render and rerender , so we have to be carefull in passing value to this array
+
+
+ DIFFERNCE BETWEEN useState and useEffect are 
+ useState hook use to create a state
+useEffect is used to  monitor the state
+
+uses of useEffect one if we want to render a component only once
+second when we want to tarck some state variable
+third we want to run a code that is unmounting (a code that is running out of our page ) we return a callbackfunction that use cleaning up function, we can clean functions
+
+
+// REACT ROUTING

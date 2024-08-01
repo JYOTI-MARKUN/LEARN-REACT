@@ -1,0 +1,28 @@
+// REACT ROUTING
+in react only one file is serve
+as we know we need to use react dom along with react to render root to the page, in the same way react alone is not enough to implement react routing, we need to use a library, react router dom
+here we create a router using createRouterBrowser this is an array where we can pass pages as object tell which component will render in which page, and then in root.render we provide rounter
+
+Best Way to reuse a component in React
+as we know react component is reuseable component, for example we wanna same header in all page in react we can use header component inside different component, 
+or the second way we can use header component along with with routerprovider in root.render (this is not considered as good practice as we want all thing to be in app component)
+third way to use reuse a component in react is using chidren inside react router path we can use nested path, using children allow us to use a outlet component provided by react dom in react component
+
+HOW TO CREATE AN ERROR PAGE TO SHOW ERROR IN REACT
+to handel error in url we can use ErrorElement in main.jsx file below our app component so that anything wrong in url will show use our error, that we created ourself
+
+useError Hook in REACT: useRouteError() it is simple hook has is passed empty to check what is the error
+
+to search variable from url URLSearchParams(location.search)
+
+in toLocaleScale we are getting error, as in starting country data is {} empty object then we are setting countrydata so to avoid that error we can apply condition that when we have data only then render the page, but doing this we can face some delay in getting the data so we usse simmer effect
+
+use link component instead of a anchor tag as when we use a tag in react it will reload the when going from one page to another, to avoid this reloading we use link component, link component in place of href we use to, react behind the seen changes this link tag to a tag with some special functionality
+
+
+What is dynamic routing in react ? How does it work
+to make any page as dynamic route we can add : colon symbol to it, doing that will make infite routes, thus any other route (other then the well defined route like home and country in this case) will take us to dynamic route
+
+use param hook provided by react router dom
+useParam hook will give us route of the current page, that can be object if it is then need to get its object,
+if user enter some route that does not exist then page will through an error, we have to handel the error

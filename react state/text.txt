@@ -1,0 +1,13 @@
+when we render our card function twice then browser through an error that root has been render in parent you are trying to render root in child so to oversome this error we need to access the root in child that we can do by passing root as the parameter to the function
+
+still this way is not considered to be a good practice as we need to tell that when our variable is updated then re-render the component
+
+so the best way is to use state , state is variable which wuto re -render when variable is updated, and react behind the screen optimize this rendering so that only the component that changes by coparing old and new version of component
+
+state is a function  all function that starts from use is called hook( just a function that provide extra functionality)
+
+state function has two value one is undefined () or the value we pass and the second value is function  
+
+our component re-render because of the second value of setstate, which is function when this function call and value is updated it automatically re-render the component
+
+to re-render our component we need to use nd value

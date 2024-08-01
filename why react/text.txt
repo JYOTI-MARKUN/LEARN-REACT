@@ -1,0 +1,7 @@
+js is a imperative programming in which everytime we make a change in the varibel we have to updae that in dom also 
+
+react is declarative programming as in react we define variable only once and then it wll auto update dom whenever any change is made in the variable
+
+react provide us component architecture
+
+single page application in asingle website if we go to different page then it will not refresh

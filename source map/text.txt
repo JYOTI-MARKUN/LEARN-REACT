@@ -1,0 +1,10 @@
+what is source maps
+when we innclude cdn link of babel it is not required to add lib folder as we can directly get the source maps file
+
+but when we use babel by script tag then it is become diffucukt for us to debug any code so  we nedd to add --source-maps code in build code of  prackage.json file and install some dev depend file
+
+and when we map script.js.map file then this file will have the code that we have write in our script file 
+
+second way to map source.json.map file with script file in lib is by setting sourcemap=true in .babelrc file
+
+third if we add --watch in place of --source-maps build code of prackage manager then it will wait for future changes also

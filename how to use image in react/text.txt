@@ -1,0 +1,11 @@
+we can render string in root.render 
+two ways to run parcel :npx parcel index.html OR include start:"parcel index.html" in script file and run npm start in terminal
+mostly we render component , main component is app component that is also called root
+
+as we know we need to export and import component in react but in case of image we need to import only
+
+event can be apply only on html elements, we can not apply event on component
+
+we can not return two sibling elements in react 
+
+react fegment <> </> it will become the parent container withoutadding any new elements like a div
