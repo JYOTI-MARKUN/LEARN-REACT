@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Loading from "./Loading";
 import './countryDetail.css'
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function CountryDetail() {
   // const countryName = new URLSearchParams(location.search).get("name");
   const params = useParams()
   const countryName = params.Country
-  console.log(params);
+  // console.log(params);
 
-  // console.log(countryName);
+  console.log(countryName);
   const [countryData, setcountryData] = useState(null);
   const [error,seterror] = useState(false);
   useEffect(() => {
@@ -30,13 +30,13 @@ export default function CountryDetail() {
           topLevelDomain:data.tld,
           currencies:Object.values(data.currencies).map((currency)=>currency.name).join(","),
           languages:Object.values(data.languages).join(","),
-          border_countries:data
+          border_countries:['India']
         });
         console.log(Object.values(data.currencies).map((currency)=>currency.name).join(","))
       }).catch((err)=>{
         seterror(true);
       })
-  }, []);
+  }, [countryName]);
 
   if(error){
     return <div>Country not found</div>
@@ -90,6 +90,9 @@ export default function CountryDetail() {
           </div>
           <div className="border-countries">
             <b>Border Countries: &nbsp;&nbsp; </b>
+            {
+              countryData.border_countries.map((border)=><Link key={border} to = {`/${border}`}>{border}</Link>)
+            }
           </div>
         </div>
       </div>

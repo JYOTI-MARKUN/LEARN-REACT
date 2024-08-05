@@ -1,2 +1,68 @@
-render function takes only one argument
-we can pass a array if we want to rendor multiple items (array of react element)
+how to get border country :
+to get border country firstly we set an emplty array
+then fix this to border place but whne we click on this it is not loading but why? because in our useEffect hook we provide an empty array that means re render the page only once after the change that si the reason when we are clicking on border country button we are not reaching to that country so if we want that our page rerender when the countrychange we simply have to pass that to the use Effect hook
+
+we can apply a condition to check if border country is present than show them other wise show nothing
+
+why in first plcae we need to fetch multiple data
+we try to get border country name we got array to country code and we can not set country code to the display so we need to fetch the data of the country of that perticular code
+
+      data.borders.map((border)=>{
+            fetch(`https://restcountries.com/v3.1/alpha/${border}`)
+            .then((res)=> res.json())
+            .then((bordersdata)=>console.log(bordersdata))
+        })
+
+
+      when we do this we got an arry of object so we use array destructure to get data of the object
+
+      after destructure we need to get update these countries to the ui and in this case it is depending on  the prevos state so when our state is depend on previos state we need to use a cal back function 
+
+             data.borders.map((border)=>{
+            fetch(`https://restcountries.com/v3.1/alpha/${border}`)
+            .then((res)=> res.json())
+            .then(([bordersData])=>{
+                console.log(bordersData.name.common)
+                setCountryData((prestate)=>({...prestate , borders : [...prestate.borders,bordersData.name.common]}))
+            })
+        })
+    here prestate is a callback function passed as we wanna secure previos data to we make a copy of that data by destructing it so now we have a copy of that previos data and we wanna update border so we set border now as we wanna change and set only borders so we again destructure the prestate data but this time only borders of prestate and here we wanna get the bordercoutry name so
+
+
+    this is good approch by react as react try to optimise of as possible as(withour react it will run as many time as the country has its border countries) it can but still it will run atleast 4 time, so we need to optimise it ourself
+
+      Promise.all(
+    data.borders.map((border)=>{
+        return fetch(`https://restcountries.com/v3.1/alpha/${border}`)
+       .then((res)=> res.json())
+       .then(([bordersData])=>{ return bordersData.name.common
+           // setCountryData((prestate)=>({...prestate , borders : [...prestate.borders,bordersData.name.common]}))
+       })
+   })
+  ).then((allbordersName)=>{
+    console.log(allbordersName)
+    setCountryData((preState)=>({...preState,borders:allbordersName}))
+  })
+
+  we know that map return an array and in this case fetch request retrun a promise, so we an array of promise so we know that in array or promises we can use promise.all method that wait for every promise to get resolve only afte rthat it apply.then method in it to get data in the ui
+
+
+
+
+  WHAT IS SIMMER Effect
+simmer effect is a loading effect in which we show exact same type od data before we get the actual data, in the when we have slow network we can show a gary color card that can be the exact representation of the card, for this we just need to copy the html for the acual actual card ans set it to the ui with same className , some can be different to set some different properties like ackgrould color mostly gray
+
+we need to show shimmer effect in starting only so we need to use ternary   operator
+
+to make simmer effect we need to pass 15-20 same card but as we know in recat coding same thing many time is not considered as best practice so we use loop, but where so firstly we need to create array and the simplest way to create an array IS
+
+const array = new Array(10) // an empty array of 10 element but in empty array we can not map so we need to fill this
+const array = new Array(10).fill() this will fill the array with 10 undefined values and what ever value we pass in this will create array of 10 those elements
+
+more simple way is Array.from({length:10})
+
+PASS DAT FROM ONE PAGE TO ANOTHER
+
+when we go from one page to another and if we are loading some data in one page and the same data we are loading in the second page, we can avoid that using a state , we can pass data from one page to another so that data from one page can be pass to second page
+
+we pass this state in link tag, we can pass any string, object and array, and to accept this in anpther component react rounter dom provide us uselocation function
