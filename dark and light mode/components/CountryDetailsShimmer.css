@@ -1,0 +1,19 @@
+.shimmer-card{
+    height: 250px;
+    width:400px;
+    background-color: #ccc;
+}
+
+.shimmer-heading{
+    background-color: #ccc;   
+    height: 30px;
+    width: 200px;
+}
+
+.shimmer-para{
+    background-color: #ccc;   
+    height: 15px;
+    width: 100px;  
+}
+
+

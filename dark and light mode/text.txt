@@ -1,0 +1,20 @@
+DARK MODE
+need to add dark class in header
+also need to save it to the local storage
+to implement dark and light mode in the project we need to use a useState variable in which we have isDark and setIsDark then we have to change this hwne we toggle that is click on it 
+
+now its time to save the state in local storage
+we just need to setitem to loacl stprage and then get it 
+when we get the item from loacl storage it is string type and we need value in bool type so we need to convert it
+
+ console.log(localStorage.getItem("setIsDark"))  // to getitme from local storage
+   console.log(typeof(localStorage.getItem("setIsDark"))) // to know the type of localStorage get item
+  console.log(JSON.parse(localStorage.getItem("setIsDark"))) // to convert the localStorage item into boolean
+
+we can add and rmove class this way but it is not considered as best practice as we are directly manupulating the dom by adding and removing the class
+
+A BETTER WAY TO implement DARK MODE IN REACT
+we need to add dark class in header and main tag but as our main tag that is present in home component can not have the access of header so we need to step up the variable 
+they both commonly used in app component
+we are rendering our home from outlet and we can not directly pas theme variable but thus outlet provide us a context property in which we can our values and then we can acess it to any component which is render by outlet, 
+to acess te context property in any component we need to use useOutletContext hook 
