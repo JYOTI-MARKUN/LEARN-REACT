@@ -1,0 +1,12 @@
+why we need to use contaxt api
+when we want to pass some prop from parent to child we need to pass through every intermediate component as well, this is called prop drilling, it can make our code difficult to react and understand, that is why we need to use CONTEXT API
+
+to create a context react provide us a function called createContext, and to use this context we need to use usecontext hook provided by react we can return the value that we pass in the createcontext function
+
+
+we can not use state hook in context API, as we can use state only inside a functional component or inside a hook,
+createContext function gives us a value called provider, this provider is a react component, we use this provider as a component to wrap all other component, and whne we warp all component with this applyTheme.Provide component we need to pass some value and this value will replace the value we provide in the time of setting createContext
+
+as we know we can not use state withour component or hook, but if we want our state to defined in context api we can create a function 
+as a component is funcion itself
+
