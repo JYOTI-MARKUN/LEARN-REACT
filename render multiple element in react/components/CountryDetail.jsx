@@ -35,7 +35,7 @@ function updateCountryData({data}){
     currencies: Object.values(data.currencies)
       .map((currency) => currency.name)
       .join(', '),
-      borders:['']
+      borders:[]
   })
 
 if (!data.borders){
@@ -46,9 +46,9 @@ Promise.all(
 data.borders.map((border)=>{
   return fetch(`https://restcountries.com/v3.1/alpha/${border}`)
  .then((res)=> res.json())
- .then(([bordersData])=>{ return bordersData.name.common
+ .then(([bordersData])=> bordersData.name.common
      // setCountryData((prestate)=>({...prestate , borders : [...prestate.borders,bordersData.name.common]}))
- }) 
+ ) 
 })
 ).then((allbordersName)=>{
 // console.log(allbordersName)
@@ -67,10 +67,10 @@ return
     fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
       .then((res) => res.json())
       .then(([data]) => {
-        updateCountryData(data)
+        updateCountryData({data})
         })
 
-      .catch((err) => {
+      .catch((err) => { 
         setNotFound(true)
       })
   }, [countryName])
