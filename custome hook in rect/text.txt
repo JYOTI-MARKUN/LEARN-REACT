@@ -1,0 +1,7 @@
+CUsTOM HOOK IN REACT
+in react custome hook is just a fancy name for function that we put in one place so that it can be used again and again
+
+inside custome hook we can use other react hook using custom hook we can prevent of importing useContext and applytheme
+
+when we use custom hook in react we can replace the below line of code with just one hook name
+  const [isDark] = useContext(applyTheme);
