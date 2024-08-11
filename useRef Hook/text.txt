@@ -1,0 +1,12 @@
+useRef hook provide us a object that have a key current which gives us the value we pass
+
+difference between useState and and useRef
+useState provide us method to update the state and rerender the component, and we use useRef when we do not want to rerender the component, as we know useRef hook do not rerender the page, so why to use useREf hook we can simply use a variable but useREf hook has a speciality it remembers the last value so when our component rerender when we update the state useRef hook get the last updated value that a simple variable can not remember,
+so we use useRef hook when we want to persit some value
+
+this can be consider the one use but the actaul use of useRef hook is to get the dom node of directly by passing ref hook property to the element we want,
+firstly we get the current value as the value we pass but as soon as our component rerender useRef hook get the dom element, we can use useEffect hook so that we get the value from useREf hook after rerender
+
+when we use useEffect hook then useRef get the value after rerender and when the page rerender the ref prop store the element in it it is like getting element as document.querySelector, so can now use eventlistner and whatever we want in it
+
+we generally pass null to useRef initially
