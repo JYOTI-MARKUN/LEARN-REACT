@@ -1,0 +1,18 @@
+here
+eslimt.config.js file is used to catch error
+whenover a form is submitted a event is occur on it that is called submitt event
+to stop a event we apply const formData = new FormData();  
+FromData is a constructor function that give us empty data, when we pass a from in it
+and when we apply for loop in it then we find the data,but by applying for loop we get the data only we get the data only when we have name field to input and select tag
+
+const handelSubmit = (e)=>{
+e.preventDefault()
+console.log(e.target)
+const data = new FormData(e.target)
+// console.log(data)
+for(const value of data.values()){
+  console.log(value)
+}
+}
+
+here to get the key & value both, we need to do data.entries
