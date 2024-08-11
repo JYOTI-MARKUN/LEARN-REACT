@@ -1,0 +1,14 @@
+when we give value prop to a forn=m field for example in input field some value it won't be change in react but in javascript if we provide some value to the input field it can be change 
+
+in simple language when we give value prop to input field in js it did not prevent us typing anything but in reat it prevent us to type anything, but why ? if we inspect the input filed inreact and check eventlistner all ancestor then we found a input filed here react apply some prevent function that won't allow us to write in it, 
+we can achieve the same functioanllity in js by apply a eventlistner in input field and update it's value to some string whatever we want then by doing that each time we try to write something this event will fire and update the value as the string we pass
+
+ONE WAY DATA BINDING IN THIS WE NEED TO TELL WHEN OUR DATA CHANGE, that means in one way data binding our ui change only when out data is updated, our ui can not change the data , here we change the state it will update our dom and then it will update our ui
+one way data binding is also called unidirectional data flow, 
+
+when our input is controlled by state then it is called controlled input
+
+when we use unidirectional data flow e.target.reset()  will not work, so we need to set each state as empty,
+changing every state is not considered as best practice so we can create ans set state for all input and select filed together so that our state change together
+
+IN TWO WAY DATA BINDING we do not need to tell that onchange we need to update state, in two way data binding we changes our ui and it will update our data as well
