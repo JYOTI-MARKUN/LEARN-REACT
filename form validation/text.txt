@@ -1,0 +1,23 @@
+#optimising the code
+in present code for each input field we are updating onchange event which is not so optimised so we need to make a function and update all value throught that
+
+  const handleChange = (e)=>{
+    console.log(e.target)
+    const {name,value} = e.target
+    setExpense((prevState) => ({
+      ...prevState,
+    [name]: e.target.value,
+    }))
+  }
+
+  in the above code when console the e.target we receive a input filed which conatins the name id
+   and value so from these we can destructure value and name and this name is used to update each field when clicked using only one function handlechange, so in this way we use only one function to change all input field and our code become optimised
+
+   // in expense form 
+
+   all thing is alright the function validation works fine but we have write so much repeadted code if we need to add more validation it will take more code of lines so we will learn to make custom input field lines
+
+   // CUSTOM validation IN REACT
+   we craete two custom validation here one for input another for select as we have to dynamically pass select also
+
+   // form validation 
