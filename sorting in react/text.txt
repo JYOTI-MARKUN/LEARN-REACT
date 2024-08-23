@@ -1,0 +1,41 @@
+sort in js
+[5,3,6,1,2,5,10].sort
+the above simple sort sort the value at the character wise so the output will be [1,10,2,3,5,5,6]
+
+// to work a sort we need to pass a callback function
+[5,3,6,1,2,5,10].sort((a-b)=>{a-b})  // in ascending order
+
+
+sort array returns the same array it changes the array
+   <table
+        className="expense-table"
+        onClick={(e) => {
+          console.log("table clicked")
+          // now below we are trying to optimize as this below code will rerender the page every time so we apply a condition in to that rerender only whenmenuPosition.left is present
+          if (menuContext.left) {
+            setMenuContext({});
+          }
+        }}
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  viewBox="0 0 384 512"
+                  className="arrow up-arrow"
+                  // the below code will sort the amount in ascending order but it is sorting old values so it should not rerender but but as we have applied onlick on table and updating the state and we know when we update the state then our page rerender so to avoid that we use e.stopPropagation
+                  // onClick={(e)=>{
+                  //   e.stopPropagation()
+                  //   // here as we know sort does not make new array so we make our self by destructring so react will get to know there is difference between new and old value so it will rerender it
+                  //   setExpenses((prevState)=>[...prevState.sort((a,b)=>a.amount-b.amount)])}}
+
+                  onClick={() => {
+                   
+                    // as we optimize the table click value so now we do not need to apply stopPropagation
+                    // e.stopPropagation()
+
+                    setExpenses((prevState) => [
+                      ...prevState.sort((a, b) => a.amount - b.amount),
+                    ]);
+                  }}
+
+the problem with the above soce is doint this kind of sorting we are changing the state so if we wanna go to the previous sttate we can not go as we are creating the new state from the old one                  
