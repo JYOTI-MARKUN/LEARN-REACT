@@ -1,0 +1,13 @@
+// FOR CSS
+
+as we know that we use link in react instead of anchor tag so that our oage do not refresh and we have to use to attribute with link tag 
+to hightlight a perticular page in react we need to use Navlink in place of link tag, it automatically apply active class in the current page and a aria-current-"page" it is an element selector so using this we can easily style our current page 
+
+// FOR TAILWIND CSS
+in tailwind css when we use Navlink it gives us special power to add a function in className
+
+   <NavLink className={(a)=>{
+            console.log(a)
+          }} to="/">Home</NavLink>  // here this a is a object which include some properties one of them is isActive, this will be true for the current page and false for the other pages, so we can use destructure to get the isActive property
+
+          the return value of the above function will store in the className
