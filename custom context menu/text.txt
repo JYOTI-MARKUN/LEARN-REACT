@@ -1,0 +1,6 @@
+# a context menu
+when we right click on the window screen we get some options these are called context menu
+to create context menu we have a event in js called context menu
+we can prevent or stop the default context menu using e.preventDefault in the event
+
+to delete expenses we need to use setExpenses from app.js along with expenses 

@@ -6,7 +6,7 @@ import {
     createBrowserRouter,
     RouterProvider,
   } from "react-router-dom";
-import Home from './components/home.jsx';
+import Home from './components/Home.jsx';
 import Error from './components/Error.jsx';
 
 
