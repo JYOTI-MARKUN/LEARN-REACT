@@ -1,0 +1,5 @@
+// WHY WE NEED TO USE REACT PORTAL FOR CREATING POP-UP
+heer in this code our pop-up is is in the li  as our model is placed inside the li which is symantically not coprrect as we usally want our opp up to be placed in body or anywhere else then the header tag, second problem is of z index, when we give z index 20 more than the parent div of the pop -up then the element will come above and mostly we do not know that the ui is related to parent z index so it does nit make any difference if we give 9999999 z index to the pop up element ot the pop up it will always be less than the other elements z index 
+
+react-dom provide us react-portal
+to use react portal we need a place in our html, using react protal provide us to use event to use in li also
