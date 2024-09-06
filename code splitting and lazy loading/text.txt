@@ -1,0 +1,17 @@
+// npm run built to built dist file that is serve as the actual developement files
+
+// npm run preview 
+application run and file served as production build
+
+
+sometime we have a page where our user do not visit frequently, so to load that page in very first attempt is not assume to be a good practice so we split our code and load that page through lazy load, that meand when user visit that page only that time load that page
+
+FOR LAZY LOAD we need to import our page lazyly and for that react provide us a lazy function thta take a callback function where we import 
+
+when we lazy load a function we need to wrap the outlet function into suspense 
+
+// FALL BACK : We can use FALL in suspense as when we load a page through lazy load it takes time to get the content os till the content loaded we want something like loading to show user
+
+// when we export normally not export default
+
+// resolve value of a promise for about component {default:About} for contact {default:Component} in case of default export when there no default export then we get {About:About} for about page
