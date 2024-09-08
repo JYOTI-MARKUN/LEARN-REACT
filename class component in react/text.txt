@@ -1,0 +1,19 @@
+// to make a class as react compenent we need to add extends compenent and 2nd thing is we need to use render method that is use to write jsx
+
+// in class base compenent when we pass props we can access it in the compenent using this keyword that is confusion as this keyword return different value so that why we use function based component more than class base component in react
+
+// to use state in class base component we need to use constructor
+
+
+// in class recat provide us setState property in the prototype 
+
+// in class component we can not use two state we have to add new property inside the same state 
+
+
+as we now in functional component when we set a state whole component update reload , so it is confusing in class component that we are uodating two state together then when we update one state it should affect the second state but that is handel by react behind the scene
+
+when we want to use props inside constructor of the class we need to pass it inside constructor as well as inside the super 
+
+// in class component constructor method runs before the render method as hwne the instance of a class created constructor method calls immediately
+
+// In each update our render method calls again and again but constructor method calls only once
