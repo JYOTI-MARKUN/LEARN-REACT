@@ -1,0 +1,54 @@
+// when a component comes on the screen three things happen with it
+first : component comes on the screen
+second : when the component gets updated 
+third : unmounting the component, when we go to some other page the our component gets unmounted from the page
+
+this whole process is called the life cucle of the component
+
+// we have dom access only inside the componentDidMount, it will neither be accessible inside the constructor nor inside the render method
+
+
+// MOUNT LIFECYCLE
+componentDidMount() {  
+console.log("componentDidMount");
+}   THIS IN CLASS COMPONENT IS EQUIVALENT TO 
+
+  useEffect(()=>{
+  console.log("useEffect");
+  console.log(document.querySelector("#newcounter-title"))
+  },[])  THIS IN FUNCTIONAL COMPONENT
+
+// IN REACT LIFECYCLE METHOD IN UPDATE STATE
+after render, DOM gets updated then componentDidUpdate runs
+
+
+
+// UPDATE LIFECYCLE
+componentDidUpdate(){
+  console.log("componentDidUpdate"); 
+  
+}  THIS IN CLASS COMPONENT IS EQUIVALENT TO 
+
+  useEffect(()=>{
+  console.log("useEffect");
+  console.log(document.querySelector("#newcounter-title"))
+  },[count]) THIS IN FUNCTIONAL COMPONENT  // THIS WIL WTOK BOTH AS componentDidMount and componentDidUpdate
+
+
+// use case of componentwillunmount
+we know that when we leave a page component gets unmounted from the page but the event listner attached to it will not not get unmounted so we use componentwillunmount to clear that interval
+
+
+useEffect(()=>{
+  console.log(document.querySelector("#newcounter-title")) 
+  const timerId = setInterval(()=>{
+  console.log("hi")
+  },1000)
+
+ return ()=>{
+  clearInterval(timerId)
+ }
+
+},[])
+
+componentwillunmount is EQUIVALENT to return value of useEffect as the code inside the return will run when we go to another page
