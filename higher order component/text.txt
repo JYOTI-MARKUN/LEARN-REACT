@@ -1,0 +1,6 @@
+Higher Order function: they are used with class based component, we can put reusable piece of code in Higher Order function and use that in class component, 
+higher order function works same in class component as hooks did in functioanl component
+
+there is a convension that the name of higher order function starts with (With keyword)
+
+higher order function i s a function that takes a component as the argument and retrn anpther component
