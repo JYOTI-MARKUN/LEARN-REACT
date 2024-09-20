@@ -3,4 +3,10 @@ higher order function works same in class component as hooks did in functioanl c
 
 there is a convension that the name of higher order function starts with (With keyword)
 
-higher order function i s a function that takes a component as the argument and retrn anpther component
+higher order function is a function that takes a component as the argument modify that component and return another component
+
+by convension the commponent we passed as argument should name as wrapped component
+
+to use higher order component in we need to import it in the component where we wanna use it and as higher order component take a component as the argument we pass the component as the arment then the code we have return in highe rorder component will render
+
+NOTE:HIGHER ORDER component ARE REACT pattern to resuse a component,to solve a problem
