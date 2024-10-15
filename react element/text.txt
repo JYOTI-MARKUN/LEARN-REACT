@@ -2,32 +2,35 @@
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script> // for react application (to create react element)
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>  // a connection between browser and react element (to rander react element into the dom)
 
-we can create react element using React.createElement it can take three values type,props, children (type html element type , props is attibute and children is innertText or child element)
+react.createElement gives us a object
+we can create react element using React.createElement it can take three values type,props, children (type html element type , props is attribute and children is innertText or child element)
 
 
 how can we show react element on our web page
 to rander react element into our browser we need to use react dom library
-here first we need to creat a space in our htmml by spcae means need to create a div having some id this id generally is root
+here first we need to creat a space in our html by space means need to create a div having some id this id generally is root
 
 then we tell our reactdom  to rander element here only .
 
 
 we need to create a root in react dom and pass the element we created in html.
 
-if we check root in console window then it contains a lots method render method is one of them, we pass our element in it and it will update element in the dom
+if we check root in console window then it contains a lot of methods, render method is one of them, we pass our element in it and it will update element in the dom
 
 in this way our react element is updated in dom
 
 
 
-We can creat our on element symply as it has only 10 properties, we can create this by copyinh data from console and paste it when we copy the data it come in json format so $$typeof :Symbol.for('react.element') does not copy as symbol is javascrit type so it is ot pased as json , 
+We can creat our on element simply as it has only 10 properties, we can create this by copying data from console and paste it when we copy the data it come in json format so $$typeof :Symbol.for('react.element') does not copy as symbol is javascript type so it can not be passed as json , 
 
 $$tyepof is used to prevent malesious code to pass through APi as json data, as untill we do not symbol in our react element, our reat will not render it on the page
 
 
-in creating element through react when we pass aray as children then we need to give key as props if we are not providing className and idName and key should be uique for each child
+in creating element through react when we pass aray as children then we need to give key as props if we are not providing className and idName and key should be unique for each child
 
-to set a style in react we have to pass a object of styling property
+to set a style in react we have to pass a object {} of styling property
 
 
-as in js we have nested child in document, in the same way we have nested child in react contaienr that we have made that is called the virtual dom
+as in js we have nested child in document, in the same way we have nested child in react container that we have made that is called the virtual dom
+
+react.createElement is better method then creating element in javascript but t is very confusing so we use JSX that allow us to write html inside javascript, but our browser do not umderstand JSX so we need a complier in between JSX and browser that convert jsx to react.createElement then our browser takes this 
