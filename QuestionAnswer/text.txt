@@ -18,8 +18,29 @@ react has one directional data flow, angular is two way vue has one way data flo
 React uses external library for state management also context API, but in other two frame work state management is a inbuilt feature
 React work on virtual Dom while Angular work on both virtal dom or optimise and vue also work on virtual dom
 
-Que3: What is JSX?
-Ans: JSX stand for javascript XML it is a syntax extension for JS used in react that allow to write HTML inside javascript
+Que3: What is JSX? Can browsers read JSX directly?
+Ans: JSX stand for javascript XML it is a syntax extension for JS used in react that allow to write HTML inside javascript 
+example : const element = <h1> Hellow! JSX </h1>
+under the hood JSX is transpiled into react.createElement by tools like babel the aboce code will be transfored into
+const element = React.createElement("h1",null,"Hellow! JSX");
+
+Que4: What is React element ? How do you render elements in React?
+Ans: React element are the basic building block of react component, react element is a object that describe what should appear on screen, react element are immutuable that means once they are created they cannot be changed,
+
+to render a react component we need to use ReactDOM library and need to create root and then render the element inside the root
+
+example
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+const root = ReactDOM.createRoot(document.querySelector("#root));
+const element = <h1>Hellow React element</h1>
+root.render(element)
+
+Que5: What is a component in React?
+Ans: 
+
+
+
 
 
 
