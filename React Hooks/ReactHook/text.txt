@@ -21,3 +21,12 @@ for using useEffect Hook we need to pass two value firts one is callback fnction
 
 # useRef Hook
 useRef is a react hook that allows us to create mutuable variables which will not re-render the component,it is also use to access the DOM elements
+
+#usememo Hook
+The React useMemo Hook returns a memorized value.(it is like caching a value so that it doesn't need to be recalculated)
+the useMemo hook only runs when one of it's dependencies gets updated. This can improve the performance of the application. there is one more hook that improve the performance and that is useCallback Hokk both useCallback and useMemo hooks are similar only difference is, useMemo hook takes two parameters first is callback function and the second is dependencies array
+useMemo returs a memorized value
+useCallback returns a memorized function
+
+#useCallback
+it is react hooks that lets us cache a function definition between re-renders.It means, when we use useCallback hook in react, it does not create the multiple instances of the same function when re-render happens.instead of creating new function it provides the cached function on re-render of the component
