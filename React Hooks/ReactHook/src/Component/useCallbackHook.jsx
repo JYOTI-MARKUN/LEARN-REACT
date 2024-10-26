@@ -9,7 +9,7 @@ export default function App5(){
     
     return (
         <>
-         <Header fun={fun}/>  {/* we have imported haeder component here when we click on the button to increase the count it will re-render this component adn as it involves header component so it will also get rerender which should not be done so to avoid that we use Memo method that comes under the react package */}
+         <Header passed={fun}/>  {/* we have imported haeder component here when we click on the button to increase the count it will re-render this component adn as it involves header component so it will also get rerender which should not be done so to avoid that we use Memo method that comes under the react package */}
         <h1>Count :{count}</h1>
         <button onClick={()=>setCount((prev)=> prev+1)}>Increase Count</button>
         </>

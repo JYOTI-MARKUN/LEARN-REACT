@@ -30,3 +30,13 @@ useCallback returns a memorized function
 
 #useCallback
 it is react hooks that lets us cache a function definition between re-renders.It means, when we use useCallback hook in react, it does not create the multiple instances of the same function when re-render happens.instead of creating new function it provides the cached function on re-render of the component
+
+#useContext
+useContext is a react hook that allows us access data from any component without explicitly passing it down through props at every level, it is used to manage global data in react app
+we can use useContext hook in three steps
+creating the Context 
+providing the Context
+comsuming the Context
+
+
+#useReducer

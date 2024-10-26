@@ -6,6 +6,8 @@ import App2 from './Component/UseEffectHook'
 import App3 from './Component/UseRefHook'
 import App4 from './Component/UseMemoHook'
 import App5 from './Component/useCallbackHook'
+import App6 from './Component/useContextHook'
+import ContextProvider from './Context/AppContext'
 
 
 createRoot(document.getElementById('root')).render(
@@ -15,7 +17,12 @@ createRoot(document.getElementById('root')).render(
   <App2/>
   <App3/> */}
   {/* <App4/> */}
-  <App5/>
+  {/* <App5/> */}
+
+  {/* step two providing the context */}
+ <ContextProvider>
+ <App6/>
+ </ContextProvider>
  
 </>
 )
