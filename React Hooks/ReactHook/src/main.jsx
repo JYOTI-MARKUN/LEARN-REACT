@@ -8,6 +8,7 @@ import App4 from './Component/UseMemoHook'
 import App5 from './Component/useCallbackHook'
 import App6 from './Component/useContextHook'
 import ContextProvider from './Context/AppContext'
+import App7 from './Component/useReducerHook'
 
 
 createRoot(document.getElementById('root')).render(
@@ -20,9 +21,9 @@ createRoot(document.getElementById('root')).render(
   {/* <App5/> */}
 
   {/* step two providing the context */}
- <ContextProvider>
+ {/* <ContextProvider>
  <App6/>
- </ContextProvider>
- 
+ </ContextProvider> */}
+ <App7 />
 </>
 )

@@ -40,3 +40,7 @@ comsuming the Context
 
 
 #useReducer
+useReducer hook is similar to useState hook but instead of providing state and setter function it provide state and dispatch function, useReducer hook takes two arguments first one is 
+Reducer function
+Initial state
+ans it retunrs the current state and dispatch method
